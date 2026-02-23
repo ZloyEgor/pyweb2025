@@ -1,7 +1,7 @@
 site_name: Мой статический сайт
 site_description: Статический сайт на MkDocs с автоматическим деплоем
 site_author: Ваше имя
-site_url: https://ZloyEgor.github.io/pyweb2025/
+site_url: https://zloyegor.github.io/pyweb2025/
 
 theme:
   name: material

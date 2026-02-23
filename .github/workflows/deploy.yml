@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./task2.1/my-static-site
+        working-directory: ./task2.1/my-static-site/site
     steps:
     - name: Checkout
       uses: actions/checkout@v4
