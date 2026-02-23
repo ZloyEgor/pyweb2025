@@ -16,9 +16,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./task2.1/my-static-site/site
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -34,7 +31,9 @@ jobs:
         pip install "mkdocs>=1.5.0,<2.0.0" "mkdocs-material>=9.0.0"
         
     - name: Build site
-      run: mkdocs build --verbose --clean
+      run: |
+        cd task2.1/my-static-site
+        mkdocs build --verbose --clean
       
     - name: Setup Pages
       uses: actions/configure-pages@v4
@@ -42,7 +41,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: './task2.1/my-static-site'
+        path: './task2.1/my-static-site/site'
 
   deploy:
     environment:
